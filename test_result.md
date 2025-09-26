@@ -171,11 +171,14 @@ backend:
     file: "server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Multi-part file upload with company/year metadata, automatic processing and vector indexing"
+      - working: true
+        agent: "testing"
+        comment: "✅ TESTED: Document upload API working correctly. Successfully handles PDF/DOCX uploads with metadata, validates file types (returns 400 for invalid), processes documents and creates chunks. Fixed minor error handling issue."
 
   - task: "AGR Query Processing API"
     implemented: true
