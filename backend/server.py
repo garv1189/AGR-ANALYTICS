@@ -102,6 +102,8 @@ async def upload_document(
             "filename": document.filename
         }
         
+    except HTTPException:
+        raise  # Re-raise HTTP exceptions as-is
     except Exception as e:
         logger.error(f"Error uploading document: {e}")
         raise HTTPException(status_code=500, detail=str(e))
