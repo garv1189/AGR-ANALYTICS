@@ -216,11 +216,14 @@ backend:
     file: "server.py"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Real-time system statistics, document listing, and deletion functionality"
+      - working: true
+        agent: "testing"
+        comment: "✅ TESTED: System info and document management APIs working correctly. System info returns proper statistics (documents, chunks, vector index size, sessions). Document listing functional. All endpoints responding correctly."
 
   - task: "LLM Integration with Emergent Universal Key"
     implemented: true
