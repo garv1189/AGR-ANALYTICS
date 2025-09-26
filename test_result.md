@@ -156,11 +156,14 @@ backend:
     file: "agents.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Structured report generator with multiple formats (📊 tables, 📈 charts, 📝 summaries, 🚨 red flags), confidence scoring, and citation tracking"
+      - working: true
+        agent: "testing"
+        comment: "✅ TESTED: Responder agent working correctly. Generated structured responses with confidence scoring (0.71 for valid queries), proper citations, and format detection (summary, text). Response quality and structure appropriate."
 
   - task: "Document Upload API"
     implemented: true
