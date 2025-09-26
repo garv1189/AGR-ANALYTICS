@@ -237,6 +237,10 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# Create uploads directory
+uploads_dir = "/app/backend/uploads"
+os.makedirs(uploads_dir, exist_ok=True)
+
 @app.on_event("shutdown")
 async def shutdown_db_client():
     client.close()
